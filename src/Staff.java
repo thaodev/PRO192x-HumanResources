@@ -1,21 +1,23 @@
 import java.time.LocalDate;
+import java.util.Date;
 
+/**
+ * This is an abstract class to initiate properties of a staff
+ */
 public abstract class Staff implements ICaculator{
     private String employeeID;
     private String employeeName;
     private int employeeAge;
     private int salaryIndex;
     private LocalDate startDate;
-    private String department;
     private int vacationDays;
 
-    public Staff(String employeeID, String employeeName, int employeeAge, int salaryIndex, LocalDate startDate, String department, int vacationDays) {
+    public Staff(String employeeID, String employeeName, int employeeAge, int salaryIndex, LocalDate startDate, int vacationDays) {
         this.employeeID = employeeID;
         this.employeeName = employeeName;
         this.employeeAge = employeeAge;
         this.salaryIndex = salaryIndex;
         this.startDate = startDate;
-        this.department = department;
         this.vacationDays = vacationDays;
     }
 
@@ -56,14 +58,6 @@ public abstract class Staff implements ICaculator{
 
     public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
     }
 
     public int getVacationDays() {

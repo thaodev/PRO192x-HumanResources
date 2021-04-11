@@ -1,10 +1,13 @@
 import java.time.LocalDate;
 
+/**
+ * this is an employee extends of staff class with added OT hours
+ */
 public class Employee extends Staff {
     private int hourOT;
 
-    public Employee(String employeeID, String employeeName, int employeeAge, int salaryIndex, LocalDate startDate, String department, int vacationDays, int hourOT) {
-        super(employeeID, employeeName, employeeAge, salaryIndex, startDate, department, vacationDays);
+    public Employee(String employeeID, String employeeName, int employeeAge, int salaryIndex, LocalDate startDate, int vacationDays, int hourOT) {
+        super(employeeID, employeeName, employeeAge, salaryIndex, startDate, vacationDays);
         this.hourOT = hourOT;
     }
 
